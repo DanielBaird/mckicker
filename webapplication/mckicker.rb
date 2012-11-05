@@ -6,6 +6,6 @@ require 'config.rb'
 
 get '/' do
 
-	"name is #{config.name}"
+	"name is #{Config.name}"
 end
 
