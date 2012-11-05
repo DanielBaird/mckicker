@@ -1,6 +1,6 @@
 require 'sinatra'
 
-require './config'
+require 'config.rb'
 
 get '/' do
 
