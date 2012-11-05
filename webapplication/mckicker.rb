@@ -1,8 +1,9 @@
 require 'sinatra'
 
+require './config'
+
 get '/' do
 
-	# stuff here
-
+	"name is #{config.name}"
 end
 
