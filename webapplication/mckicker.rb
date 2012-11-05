@@ -2,7 +2,7 @@ require 'sinatra'
 
 $LOAD_PATH << '.'
 
-require 'config.rb'
+require 'config'
 
 get '/' do
 
