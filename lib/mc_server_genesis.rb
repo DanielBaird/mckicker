@@ -3,7 +3,6 @@
 # create a minecraft server with the given name, from the given template.
 #
 module ServerGenesis
-	
 
 	def create_new_server(server_name, template_name, config)
 		# create a server called server_name from the template template_name

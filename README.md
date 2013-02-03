@@ -1,4 +1,5 @@
 mckicker
 ========
 
-small, dumb Minecraft server starter
+fairly dumb Minecraft server starter.
+
