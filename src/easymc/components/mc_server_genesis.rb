@@ -14,9 +14,11 @@ module ServerGenesis
 
 		# does the named server already exist? it shouldn't.
 		server_dir = File.join server_root, server_name
+		raise ArgumentError, "server dir already exists at [#{server_dir}]" if MCFS.dir_exists? server_dir
 
-		# does the template exist?
+		# does the template exist?  it should.
 		template_dir = File.join template_root, template_name
+		raise ArgumentError, "cannot find template at [#{template_dir}]" unless MCFS.dir_exists? template_dir
 
 	end
 
