@@ -1,14 +1,16 @@
 
-require_relative '../../lib/mc_server_genesis'
+require_relative '../../src/easymc/easymc'
 
 # -------------------------------------------------------------------
 describe 'create_new_server method' do
 
 	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	it "should fail if templates root isn't specified" do
-		ServerGenesis.create_new_server('test-server', 'test-template', {
-			:servers => File.join('..', 'testbed', 'servers')
-		}).should_raise ArgumentError
+		options = { :servers => File.join('..', 'testbed', 'servers') }
+
+		expect {
+			EasyMC.create_new_server('test-server', 'test-template', options)
+		}.to raise_error ArgumentError
 	end
 	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	xit "should lowercase names" do
